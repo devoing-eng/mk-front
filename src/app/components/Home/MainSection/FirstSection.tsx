@@ -1,4 +1,4 @@
-// /app/components/Home/MainSection/FirstSection.tsx
+// app/components/Home/MainSection/FirstSection.tsx
 
 'use client';
 
@@ -17,7 +17,6 @@ export const FirstSection = () => {
   const [selectedFilter, setSelectedFilter] = useState<FilterValue>('trending');
   const [currentPage, setCurrentPage] = useState(1);
 
-  // 🚀 UN SEUL HOOK pour tout remplacer !
   const { 
     data: response, 
     isLoading, 
