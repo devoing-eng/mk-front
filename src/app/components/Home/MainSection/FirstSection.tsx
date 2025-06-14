@@ -3,11 +3,11 @@
 'use client';
 
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
+import { FirstSectionCard } from './FirstSectionCard';
 import { useState, useCallback } from 'react';
 import { usePaginatedCoins } from '@/app/hooks/usePaginatedCoins';
 import { LiveBar } from './LiveBar';
 import { CoinFilters } from './CoinFilters';
-import { FirstSectionCard } from './FirstSectionCard';
 
 const ITEMS_PER_PAGE = 27;
 
