@@ -1,4 +1,4 @@
-//src/app/components/Home/MainSection/SingleCard.tsx
+//src/app/components/Home/MainSection/FirstSectionCard.tsx
 
 import { useEffect, useRef, useState } from 'react';
 import { formatNumber } from '@/utils/formatters';
@@ -77,7 +77,7 @@ export const FirstSectionCard = ({ coin }: FirstSectionCardProps) => {
           )}
           
           <Link href={`/coin/${coin.id}`}>
-            <button className="w-full text-left">
+            <button className="cursor-pointer w-full text-left">
               <div className="flex p-4">
                 {/* Coin Image */}
                 <div className="w-1/4 mr-4 h-32 overflow-hidden flex-shrink-0 flex items-start justify-center">

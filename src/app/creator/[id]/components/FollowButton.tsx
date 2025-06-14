@@ -84,7 +84,7 @@ export default function FollowButton({ targetUserId, onFollowChange, className =
     <button
       onClick={handleFollow}
       disabled={isLoading || !user || user.id === targetUserId}
-      className={`${
+      className={`cursor-pointer ${
         user?.id === targetUserId
           ? 'bg-gray-700 border-gray-600'
           : isFollowing 

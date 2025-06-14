@@ -23,7 +23,7 @@ const CoinDescription = ({ description, maxChars = 200 }: CoinDescriptionProps) 
       {needsTruncation && (
         <button 
           onClick={() => setIsExpanded(!isExpanded)}
-          className="text-blue-500 hover:text-blue-700 text-sm font-medium mt-1 focus:outline-none"
+          className="text-blue-500 hover:text-blue-700 text-sm font-medium mt-1 focus:outline-none cursor-pointer"
         >
           {isExpanded ? 'View less' : 'View more'}
         </button>

@@ -61,7 +61,7 @@ export const AddressLink = ({ coinData }: { coinData: CoinStaticData }) => {
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-haspopup="true"
-        className="flex gap-2 items-center text-gray-300 hover:text-white transition-colors duration-200"
+        className="flex gap-2 items-center text-gray-300 hover:text-white transition-colors duration-200 cursor-pointer "
       >
         CA:<span className='underline'>{displayAddress}</span> 
       </button>

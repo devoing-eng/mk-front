@@ -99,7 +99,7 @@ export const SingleCard = ({ coinId, trendingCoins }: SingleCardProps) => {
             {progress.toFixed(2)}%
           </div>
           <Link href={`/coin/${coinId}`}>
-            <button className="w-full text-left">
+            <button className="w-full text-left cursor-pointer">
               <div className="flex p-4">
                 <div className="w-1/4 mr-4 h-32 overflow-hidden flex-shrink-0 flex items-start justify-center">
                   <Image

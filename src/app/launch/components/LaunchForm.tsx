@@ -468,21 +468,21 @@ const LaunchForm = () => {
 
   return (
     <div className="w-full md:w-1/2">
-      <form className="border-8 border-white bg-white bg-opacity-5 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+      <form className="border-8 border-white bg-white/5 bg-opacity-5 shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
         <div className="mb-6">
           <label className="flex text-white text-sm font-medium mb-2">Coin Type</label>
           <div className="flex space-x-4">
             <button
               type="button"
               onClick={() => {setIsAudioMeme(false); setAudio(null); setAudioError(null);}}
-              className={`py-2 px-4 rounded transition-colors ${!isAudioMeme ? 'bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold' : 'bg-gray-700 text-gray-300'}`}
+              className={`py-2 px-4 rounded transition-colors cursor-pointer ${!isAudioMeme ? 'bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold' : 'bg-gray-700 text-gray-300'}`}
             >
               Original
             </button>
             <button
               type="button"
               onClick={() => setIsAudioMeme(true)}
-              className={`py-2 px-4 rounded transition-colors ${isAudioMeme ? 'bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold' : 'bg-gray-700 text-gray-300'}`}
+              className={`py-2 px-4 rounded transition-colors cursor-pointer ${isAudioMeme ? 'bg-gradient-to-r from-red-600 to-yellow-600 text-white font-semibold' : 'bg-gray-700 text-gray-300'}`}
             >
               Audio Meme
             </button>
@@ -493,7 +493,7 @@ const LaunchForm = () => {
             Name<span className="text-fuchsia-500">*</span>
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="name"
             type="text"
             value={name}
@@ -506,7 +506,7 @@ const LaunchForm = () => {
             Ticker<span className="text-fuchsia-500">*</span>
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="ticker"
             type="text"
             value={ticker}
@@ -519,7 +519,7 @@ const LaunchForm = () => {
             Description<span className="text-fuchsia-500">*</span>
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="description"
             rows={4}
             value={description}
@@ -663,7 +663,7 @@ const LaunchForm = () => {
                 Twitter / X
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="twitter"
                 type="url"
                 placeholder="https://x.com/..."
@@ -676,7 +676,7 @@ const LaunchForm = () => {
                 Telegram
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="telegram"
                 type="url"
                 placeholder="https://t.me/..."
@@ -689,7 +689,7 @@ const LaunchForm = () => {
                 Website
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="website"
                 type="url"
                 placeholder="https://"
@@ -783,7 +783,7 @@ const LaunchForm = () => {
           </label>
           <div className="relative">
             <input
-              className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+              className={`bg-white shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
                 affiliateCode && (isCodeValid(affiliateCode) === false ? 'border-red-500' : isCodeValid(affiliateCode) ? 'border-green-500' : '')
               }`}
               id="affiliateCode"

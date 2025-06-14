@@ -322,7 +322,6 @@ const Header = () => {
     { name: 'Coinbase', logo: '/images/coinbase-logo.png', onClick: connectCoinbase },
     { name: 'Phantom', logo: '/images/phantom-logo.png', onClick: connectPhantom },
     { name: 'Trust Wallet', logo: '/images/trustwallet-logo.png', onClick: connectTrustWallet },
-    { name: 'Farcaster', logo: '/images/farcaster-logo.png', onClick: () => {} },
   ];
 
   return (

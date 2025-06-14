@@ -110,7 +110,7 @@ export default function SearchBar() {
           onKeyDown={handleKeyDown}
           onFocus={() => setShowDropdown(true)}
           placeholder="Search by name, ticker, or address"
-          className="w-full p-2 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 text-sm text-gray-900"
+          className="bg-white w-full p-2 pl-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-300 text-sm text-gray-900"
         />
       </div>
 

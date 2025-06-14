@@ -256,7 +256,7 @@ export default function ThreadDiscussion({ coinId, coinData }: { coinId : string
         </div>
         <button
           onClick={() => setReplyTo('initial')}
-          className="flex items-center justify-center space-x-2 bg-purple-500 hover:bg-purple-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors w-full sm:w-auto"
+          className="flex items-center justify-center space-x-2 bg-purple-500 hover:bg-purple-600 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-colors w-full sm:w-auto cursor-pointer"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -299,14 +299,14 @@ export default function ThreadDiscussion({ coinId, coinData }: { coinId : string
                     <span className="text-xs text-gray-400">{timeAgo(comment.timestamp)}</span>
                     <button 
                       onClick={() => setReplyTo(comment.id)}
-                      className="text-blue-400 text-xs hover:text-blue-300 transition-colors duration-200"
+                      className="text-blue-400 text-xs hover:text-blue-300 transition-colors duration-200 cursor-pointer"
                     >
                       Reply
                     </button>
                   </div>
                   <button 
                     onClick={() => handleLike(comment.id)}
-                    className="flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-700/50 hover:bg-gray-700 transition-colors duration-200 mt-1 sm:mt-0 ml-auto sm:ml-0"
+                    className="flex items-center space-x-2 px-3 py-1 rounded-full bg-gray-700/50 hover:bg-gray-700 transition-colors duration-200 mt-1 sm:mt-0 ml-auto sm:ml-0 cursor-pointer"
                   >
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 

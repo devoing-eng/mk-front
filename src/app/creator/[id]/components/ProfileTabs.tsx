@@ -145,7 +145,7 @@ export default function ProfileTabs({
                     activeTab === tab.name
                       ? 'border-indigo-500 text-indigo-500'
                       : 'border-transparent text-gray-400 hover:border-gray-300 hover:text-gray-300'
-                  } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm`}
+                  } whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm cursor-pointer`}
                 >
                   {tab.label}
                   {typeof tab.count !== 'undefined' && tab.count > 0 && (

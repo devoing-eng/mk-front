@@ -455,7 +455,7 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
             <div className="bg-gray-800 p-1 rounded-lg flex gap-1 text-sm">
               <button
                 onClick={() => setActiveMobileView('buy')}
-                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
+                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap cursor-pointer ${
                   activeMobileView === 'buy'
                     ? 'bg-indigo-600 text-white'
                     : 'text-gray-400 hover:text-white'
@@ -465,7 +465,7 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
               </button>
               <button
                 onClick={() => setActiveMobileView('progress')}
-                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
+                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap cursor-pointer ${
                   activeMobileView === 'progress'
                     ? 'bg-indigo-600 text-white'
                     : 'text-gray-400 hover:text-white'
@@ -475,7 +475,7 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
               </button>
               <button
                 onClick={() => setActiveMobileView('thread')}
-                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
+                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap cursor-pointer ${
                   activeMobileView === 'thread'
                     ? 'bg-indigo-600 text-white'
                     : 'text-gray-400 hover:text-white'
@@ -485,7 +485,7 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
               </button>
               <button
                 onClick={() => setActiveMobileView('trades')}
-                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap ${
+                className={`px-3 py-1.5 rounded-md transition-all whitespace-nowrap cursor-pointer ${
                   activeMobileView === 'trades'
                     ? 'bg-indigo-600 text-white'
                     : 'text-gray-400 hover:text-white'
@@ -501,7 +501,7 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
             <div className="bg-gray-800 p-1 rounded-lg flex gap-1 text-sm">
               <button
                 onClick={() => setActiveView('comments')}
-                className={`px-4 py-2 rounded-md transition-all ${
+                className={`px-4 py-2 rounded-md transition-all cursor-pointer ${
                   activeView === 'comments'
                     ? 'bg-indigo-600 text-white'
                     : 'text-gray-400 hover:text-white'
@@ -511,7 +511,7 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
               </button>
               <button
                 onClick={() => setActiveView('transactions')}
-                className={`px-4 py-2 rounded-md transition-all ${
+                className={`px-4 py-2 rounded-md transition-all cursor-pointer ${
                   activeView === 'transactions'
                     ? 'bg-indigo-600 text-white'
                     : 'text-gray-400 hover:text-white'
@@ -589,11 +589,11 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
                         </div>
 
                         <div className="grid grid-cols-4 gap-2">
-                          <button onClick={() => handlePresetAmount('0.0')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">reset</button>
-                          <button onClick={() => handlePresetAmount('0.01')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">0.01 ETH</button>
-                          <button onClick={() => handlePresetAmount('0.05')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">0.05 ETH</button>
-                          <button onClick={() => handlePresetAmount('0.1')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">0.1 ETH</button>
-                          <button onClick={() => handleMaxAmount()} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4">MAX</button>
+                          <button onClick={() => handlePresetAmount('0.0')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">reset</button>
+                          <button onClick={() => handlePresetAmount('0.01')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">0.01 ETH</button>
+                          <button onClick={() => handlePresetAmount('0.05')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">0.05 ETH</button>
+                          <button onClick={() => handlePresetAmount('0.1')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">0.1 ETH</button>
+                          <button onClick={() => handleMaxAmount()} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4 cursor-pointer">MAX</button>
                         </div>
 
                         <p className="text-xs text-gray-400">
@@ -826,11 +826,11 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
                   </div>
 
                   <div className="grid grid-cols-4 gap-2">
-                    <button onClick={() => handlePresetAmount('0.0')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">reset</button>
-                    <button onClick={() => handlePresetAmount('0.01')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">0.01 ETH</button>
-                    <button onClick={() => handlePresetAmount('0.05')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">0.05 ETH</button>
-                    <button onClick={() => handlePresetAmount('0.1')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">0.1 ETH</button>
-                    <button onClick={() => handleMaxAmount()} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4">MAX</button>
+                    <button onClick={() => handlePresetAmount('0.0')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">reset</button>
+                    <button onClick={() => handlePresetAmount('0.01')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">0.01 ETH</button>
+                    <button onClick={() => handlePresetAmount('0.05')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">0.05 ETH</button>
+                    <button onClick={() => handlePresetAmount('0.1')} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">0.1 ETH</button>
+                    <button onClick={() => handleMaxAmount()} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4 cursor-pointer">MAX</button>
                   </div>
 
                   <p className="text-xs text-gray-400">

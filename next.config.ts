@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 
+type CspRules = {
+  [key: string]: string[];
+};
+
 const nextConfig : NextConfig = {
   images: {
     unoptimized: true,
@@ -91,8 +95,6 @@ const nextConfig : NextConfig = {
         'https://mainnet.base.org',
         'https://mainnet.optimism.io',
         'https://platform.twitter.com',
-        'https://relay.farcaster.xyz/v1/channel',
-        'https://relay.farcaster.xyz/v1/channel/status',
         'wss://www.walletlink.org',
         'https://www.walletlink.org',
         'https://api.geckoterminal.com/api/v2/',
@@ -137,7 +139,7 @@ const nextConfig : NextConfig = {
     };
 
     // Function to combine CSP rules into a string
-    const getCspString = (rules: { [s: string]: unknown; } | ArrayLike<unknown>) => {
+    const getCspString = (rules: CspRules) => {
       return Object.entries(rules)
         .map(([key, values]) => `${key} ${values.join(' ')}`)
         .join('; ');

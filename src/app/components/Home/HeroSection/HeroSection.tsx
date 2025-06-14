@@ -1,8 +1,9 @@
 // src/app/components/Home/HeroSection/HeroSection.tsx
 
-import TwoButtons from './TwoButtons';
+
 import SearchBar from './SearchBar';
 import React from 'react';
+import { TwoButtons } from './TwoButtons';
 
 const HeroSection = () => {
   return (

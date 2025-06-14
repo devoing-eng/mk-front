@@ -86,7 +86,7 @@ const TokenBalanceDisplay = ({
         <button
           onClick={() => refetch()}
           disabled={isLoadingL1 || isLoadingL2}
-          className="p-1 rounded hover:bg-gray-700 transition-colors disabled:opacity-50"
+          className="p-1 rounded hover:bg-gray-700 transition-colors disabled:opacity-50 cursor-pointer"
           aria-label="Refresh balances"
         >
           <IoRefreshOutline className={`w-3.5 h-3.5 text-gray-100 ${(isLoadingL1 || isLoadingL2) ? 'animate-spin' : ''}`} />
@@ -98,7 +98,7 @@ const TokenBalanceDisplay = ({
           coinData.ticker,
           coinData.imageUrl
         )}
-        className="flex items-center gap-1 px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition-colors"
+        className="flex items-center gap-1 px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition-colors cursor-pointer"
       >
         <Image
           src="/images/metamask-logo.png"

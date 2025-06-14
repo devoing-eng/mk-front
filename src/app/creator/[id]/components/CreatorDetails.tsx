@@ -164,7 +164,7 @@ export default function CreatorDetails({ params }: {params:{ id: string }}) {
 
         <div className="mt-8 flex justify-center">
           <Link href="/" passHref>
-            <button className="flex items-center gap-3 border border-gray-400 text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-gray-800 transition duration-200">
+            <button className="flex items-center gap-3 border border-gray-400 text-white font-semibold px-4 py-2.5 rounded-lg hover:bg-gray-800 transition duration-200 cursor-pointer">
             <GiRocketFlight className='text-amber-400 text-xl' />
               Back to Kults
             </button>

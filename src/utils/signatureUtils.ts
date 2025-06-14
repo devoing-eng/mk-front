@@ -12,7 +12,7 @@ export const createSignatureMessage = (address: string) => {
 export const requestSignature = async (
     message: string, 
     address: string, 
-    walletType: 'metamask' | 'coinbase' | 'trust' | 'phantom' | 'farcaster',
+    walletType: 'metamask' | 'coinbase' | 'trust' | 'phantom',
   ): Promise<string> => {
     try {
         
