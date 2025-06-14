@@ -1,0 +1,1 @@
+export const defaultProfileImage = '/images/blockie2.jpg'
