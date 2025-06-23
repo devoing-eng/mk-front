@@ -1,11 +1,11 @@
 //src/app/components/Home/MainSection/FirstSectionCard.tsx
 
-import { useEffect, useRef, useState } from 'react';
-import { formatNumber } from '@/utils/formatters';
 import { IoFlash, IoMusicalNotes } from 'react-icons/io5';
+import { useEffect, useRef, useState } from 'react';
+import { EnrichedCoin } from '@/app/types/coin';
+import { formatNumber } from '@/utils/formatters';
 import Image from 'next/image';
 import Link from 'next/link';
-import { EnrichedCoin } from '@/app/types/coin';
 
 interface FirstSectionCardProps {
   coin: EnrichedCoin;
@@ -92,7 +92,9 @@ export const FirstSectionCard = ({ coin }: FirstSectionCardProps) => {
                 
                 {/* Coin Info */}
                 <div className="w-3/4 flex flex-col">
-                  <h2 className="text-white text-xl font-bold mb-1">{coin.name}</h2>
+                  <h2 className="text-white text-xl font-bold mb-1">
+                    {coin.name.length > 18 ? `${coin.name.slice(0, 18)}...` : coin.name}
+                  </h2>
                   
                   <p className="text-indigo-400 font-semibold mb-1 flex items-center">
                     {coin.ticker}
