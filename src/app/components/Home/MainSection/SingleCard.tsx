@@ -111,7 +111,9 @@ export const SingleCard = ({ coinId, trendingCoins }: SingleCardProps) => {
                   />
                 </div>
                 <div className="w-3/4 flex flex-col">
-                  <h2 className="text-white text-xl font-bold mb-1">{coinData.name}</h2>
+                <h2 className="text-white text-xl font-bold mb-1">
+                    {coinData.name.length > 18 ? `${coinData.name.slice(0, 18)}...` : coinData.name}
+                  </h2>
                   <p className="text-indigo-400 font-semibold mb-1 flex items-center">
                     {coinData.ticker}
                     {coinData.audioUrl && (

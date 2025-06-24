@@ -417,7 +417,7 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
               />
               <div className="flex flex-col sm:flex-row sm:items-center sm:whitespace-nowrap sm:gap-3">
                 <div className="flex items-center gap-3 overflow-x-auto pb-1 sm:pb-0">
-                  <h2 className="text-md lg:text-lg font-bold">{coinData.name.toUpperCase()}</h2>
+                  <h2 className="text-md lg:text-lg font-bold break-all">{coinData.name.toUpperCase()}</h2>
                   <p className="text-indigo-400">{coinData.ticker}</p>
                   {liveMarketCap !== 0 && (
                     <p className="text-green-300">Mkt Cap: ${formatNumber(liveMarketCap)}</p>
