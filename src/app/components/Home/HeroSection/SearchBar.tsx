@@ -148,7 +148,7 @@ export default function SearchBar() {
                               priority={false}
                               aria-label={result.primaryText}
                             />
-                        </div>
+                          </div>
                         )}
                           <div>
                             <div className="font-medium text-gray-600">{result.primaryText}</div>

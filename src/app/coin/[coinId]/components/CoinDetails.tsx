@@ -665,11 +665,11 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
                         </div>
 
                         <div className="grid grid-cols-4 gap-2">
-                          <button onClick={handleReset} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">reset</button>
-                          <button onClick={() => handleAddValue(25)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">25%</button>
-                          <button onClick={() => handleAddValue(50)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">50%</button>
-                          <button onClick={() => handleAddValue(75)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">75%</button>
-                          <button onClick={() => handleAddValue(100)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4">100%</button>
+                          <button onClick={handleReset} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">reset</button>
+                          <button onClick={() => handleAddValue(25)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">25%</button>
+                          <button onClick={() => handleAddValue(50)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">50%</button>
+                          <button onClick={() => handleAddValue(75)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">75%</button>
+                          <button onClick={() => handleAddValue(100)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4 cursor-pointer">100%</button>
                         </div>
 
                         <p className="text-xs text-gray-400">
@@ -902,11 +902,11 @@ export default function CoinDetails({ coinId } : { coinId : string}) {
                   </div>
 
                   <div className="grid grid-cols-4 gap-2">
-                    <button onClick={handleReset} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">reset</button>
-                    <button onClick={() => handleAddValue(25)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">25%</button>
-                    <button onClick={() => handleAddValue(50)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">50%</button>
-                    <button onClick={() => handleAddValue(75)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm">75%</button>
-                    <button onClick={() => handleAddValue(100)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4">100%</button>
+                    <button onClick={handleReset} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">reset</button>
+                    <button onClick={() => handleAddValue(25)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">25%</button>
+                    <button onClick={() => handleAddValue(50)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">50%</button>
+                    <button onClick={() => handleAddValue(75)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm cursor-pointer">75%</button>
+                    <button onClick={() => handleAddValue(100)} className="bg-gray-800 px-2 py-1 rounded text-xs lg:text-sm col-span-4 cursor-pointer">100%</button>
                   </div>
 
                   <p className="text-xs text-gray-400">

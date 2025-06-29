@@ -238,7 +238,7 @@ export default function NotificationDisplay({onUnreadCountChange} : Notification
         <div className="flex items-center gap-4">
           <button
             onClick={() => setShowFilters(!showFilters)}
-            className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
+            className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors cursor-pointer"
           >
             <FiFilter className={showFilters ? "text-indigo-500" : "text-gray-400"} />
             Filters
@@ -247,7 +247,7 @@ export default function NotificationDisplay({onUnreadCountChange} : Notification
           {hasUnreadNotifications && (
             <button
               onClick={markAllAsRead}
-              className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors text-gray-400 hover:text-white"
+              className="flex items-center gap-2 px-3 py-2 text-sm rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors text-gray-400 hover:text-white cursor-pointer"
             >
               <FiCheckCircle />
               Mark all as read
