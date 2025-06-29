@@ -151,7 +151,10 @@ export default function CoinProgress({ coinData, coinId }: CoinProgressProps) {
             {coinData.name}
           </h2>
           <p className="text-indigo-400">{coinData.ticker}</p>
-          <CoinDescription description={coinData.description} maxChars={200} />
+          <CoinDescription
+            description={coinData.description}
+            maxChars={200}
+          />
           
           {/* Social network buttons */}
           <div className="flex space-x-4 mt-2">
