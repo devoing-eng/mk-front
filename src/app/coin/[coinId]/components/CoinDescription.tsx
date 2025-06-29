@@ -18,7 +18,7 @@ const CoinDescription = ({ description, maxChars = 200 }: CoinDescriptionProps) 
   
   return (
     <div className="description-container">
-      <p className="mt-1">{displayText}</p>
+      <p className="mt-1 break-all">{displayText}</p>
       
       {needsTruncation && (
         <button 

@@ -137,21 +137,23 @@ export default function SearchBar() {
                       }`}
                     >
                       <div className="flex items-center">
-                      {result.imageUrl && (
-                        <Image
-                          src={result.imageUrl}
-                          alt={result.primaryText}
-                          width={24}
-                          height={24}
-                          className="rounded-full mr-2"
-                          priority={false}
-                          loading="lazy"
-                        />
-                      )}
-                        <div>
-                          <div className="font-medium text-gray-600">{result.primaryText}</div>
-                          <div className="text-sm text-gray-500">{result.secondaryText}</div>
+                        {result.imageUrl && (
+                          <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 mr-2">
+                            <Image
+                              src={result.imageUrl}
+                              alt={result.primaryText}
+                              width={24}
+                              height={24}
+                              className="w-full h-full object-cover"
+                              priority={false}
+                              aria-label={result.primaryText}
+                            />
                         </div>
+                        )}
+                          <div>
+                            <div className="font-medium text-gray-600">{result.primaryText}</div>
+                            <div className="text-sm text-gray-500">{result.secondaryText}</div>
+                          </div>
                       </div>
                     </div>
                   ))}
