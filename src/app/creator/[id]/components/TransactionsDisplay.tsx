@@ -102,14 +102,19 @@ export default function TransactionsDisplay({ userAddress }:{ userAddress : stri
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
-                <Image 
+
+                <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 mr-">
+                  <Image 
                     src={tx.coin.imageUrl} 
                     alt={tx.coin.name} 
                     width={40}
                     height={40}
-                    className="rounded-full max-w-[40px] h-auto w-auto"
+                    className="w-full h-full object-cover"
+                    priority={false}
+                    aria-label={tx.coin.name}
                     unoptimized
-                />
+                  />
+                </div>
                 <div>
                   <Link 
                     href={`/coin/${tx.coin.id}`}
