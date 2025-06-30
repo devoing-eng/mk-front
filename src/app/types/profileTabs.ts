@@ -25,42 +25,19 @@ export interface ProfileTabsProps {
   };
 }
 
-export interface Coin {
-  id: string;
-  imageUrl: string;
-  name: string;
-  ticker: string;
-  creator: {
-    username: string;
-  };
-  description: string | null;
-  tokenData?: { 
-    reserves: { 
-      initialVToken: string;
-      vTokenReserve: string;
-      initialVETH: string;
-      vEthReserve: string;
-      bridgeThreshold: string;
-    };
-  };
-}
-
-export interface UserHolding {
+export interface CreatedHolding {
   coinId: string;
   coin: {
     id: string;
     name: string;
     ticker: string;
     imageUrl: string;
+    audioUrl: string;
+    isPremium: boolean;
     description: string | null;
     tokenData?: {
-      reserves: { 
-        initialVToken: string;
-        vTokenReserve: string;
-        initialVETH: string;
-        vEthReserve: string;
-        bridgeThreshold: string;
-      };
+      liveMarketCap: number;
+      progress : number;
     };
     creator: {
       username: string;
