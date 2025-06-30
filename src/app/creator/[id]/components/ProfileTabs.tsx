@@ -1,7 +1,6 @@
 // src/app/creator/[id]/components/ProfileTabs.tsx
 
-import { Coin, ProfileTabsProps, Tab, UserHolding } from '@/app/types/profileTabs';
-
+import { ProfileTabsProps, Tab, CreatedHolding } from '@/app/types/profileTabs';
 import { useState, useEffect, useRef, useMemo } from 'react';
 import TransactionsDisplay from './TransactionsDisplay';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,6 +10,23 @@ import ClaimsDisplay from './ClaimsDisplay';
 import Link from 'next/link';
 import { SingleCard } from '@/app/components/Home/MainSection/SingleCard';
 
+interface CoinData {
+  coin?: {
+    tokenAddress?: string | null;
+    tokenData?: {
+      reserves?: {
+        vEthReserve?: string;
+      };
+    };
+  };
+  tokenAddress?: string | null;
+  tokenData?: {
+    reserves?: {
+      vEthReserve?: string;
+    };
+  };
+}
+
 export default function ProfileTabs({
   activeTab, 
   setActiveTab, 
@@ -18,8 +34,8 @@ export default function ProfileTabs({
   profileData
 }: ProfileTabsProps) {
 
-  const [createdCoins, setCreatedCoins] = useState<Coin[]>([]);
-  const [heldCoins, setHeldCoins] = useState<UserHolding[]>([]);
+  const [createdCoins, setCreatedCoins] = useState<CreatedHolding[]>([]);
+  const [heldCoins, setHeldCoins] = useState<CreatedHolding[]>([]);
   const [loading, setLoading] = useState(false);
   const [displayCount, setDisplayCount] = useState(6);
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -81,23 +97,6 @@ export default function ProfileTabs({
         const result = await response.json();
         
         if (!result.success) throw new Error(result.error);
-
-        interface CoinData {
-          coin?: {
-            tokenAddress?: string | null;
-            tokenData?: {
-              reserves?: {
-                vEthReserve?: string;
-              };
-            };
-          };
-          tokenAddress?: string | null;
-          tokenData?: {
-            reserves?: {
-              vEthReserve?: string;
-            };
-          };
-        }
 
         // Sort the data by vEthReserve before setting state
         const sortedData = result.data.sort((a: CoinData, b: CoinData) => {
@@ -213,7 +212,7 @@ export default function ProfileTabs({
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
                     <SingleCard
-                      coinId={holding.coin.id}
+                      data={holding}
                     />
                   </motion.div>
                 ))}
@@ -267,14 +266,14 @@ export default function ProfileTabs({
               <AnimatePresence>
                 {createdCoins.slice(0, displayCount).map((coin, index) => (
                   <motion.div
-                    key={coin.id}
+                    key={coin.coin.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
                   >
                     <SingleCard
-                      coinId={coin.id}
+                      data={coin}
                     />
                   </motion.div>
                 ))}
