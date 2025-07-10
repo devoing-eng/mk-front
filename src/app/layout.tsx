@@ -1,5 +1,6 @@
 // src/app/layout.tsx
 
+import { AppErrorBoundary } from './components/Global/AppErrorBoundary';
 import LoadingBar from "./components/Global/LoadingBar";
 import { Analytics } from '@vercel/analytics/next';
 import { Providers } from './providers/Providers';
@@ -9,7 +10,6 @@ import type { Metadata, Viewport } from "next";
 import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
 import './globals.css';
-import { AppErrorBoundary } from './components/Global/AppErrorBoundary';
 import VersionChecker from './components/Global/VersionChecker';
 
 export const metadata: Metadata = {
