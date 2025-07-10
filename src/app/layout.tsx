@@ -86,7 +86,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-      <AppErrorBoundary>
+        <AppErrorBoundary>
         <VersionChecker />
         <Providers>
           <div className="flex flex-col min-h-screen">
@@ -112,7 +112,7 @@ export default function RootLayout({
               <Footer />
           </div>
         </Providers>
-      </AppErrorBoundary>
+        </AppErrorBoundary>
       </body>
     </html>
   );
