@@ -86,7 +86,7 @@ export const SingleCard = ({ data }: SingleCardProps) => {
               </div>
             </button>
           </Link>
-          {progress && (
+          {progress !== undefined && (
             <>
               <div className={`absolute bottom-2 left-2 text-green-300 p-2 text-sm font-bold`}>
                 {progress.toFixed(2)}%
