@@ -9,7 +9,7 @@ import type { Metadata, Viewport } from "next";
 import { Toaster } from 'react-hot-toast';
 import Script from 'next/script';
 import './globals.css';
-import { AppErrorBoundary } from './components/Global/AppErrorBoundary';
+
 import VersionChecker from './components/Global/VersionChecker';
 
 export const metadata: Metadata = {
@@ -86,7 +86,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <AppErrorBoundary>
+
         <VersionChecker />
         <Providers>
           <div className="flex flex-col min-h-screen">
@@ -112,7 +112,7 @@ export default function RootLayout({
               <Footer />
           </div>
         </Providers>
-        </AppErrorBoundary>
+
       </body>
     </html>
   );
