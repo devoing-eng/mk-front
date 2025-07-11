@@ -1,10 +1,10 @@
 //src/app/components/Home/MainSection/SingleCard.tsx
 
+import { CreatedHolding } from '@/app/types/profileTabs';
 import { formatNumber } from '@/utils/formatters';
 import { IoFlash, IoMusicalNotes } from 'react-icons/io5';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CreatedHolding } from '@/app/types/profileTabs';
 
 interface SingleCardProps {
   data: CreatedHolding;
