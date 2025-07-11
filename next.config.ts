@@ -82,6 +82,7 @@ const nextConfig : NextConfig = {
         'https://*.tradingview.com',
         'https://*.twitter.com',
         'https://*.twimg.com',
+        'https://x.com',
       ],
       'font-src': [
         "'self'",
